@@ -1,0 +1,176 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block content %}
+
+              
+   
+    <div class="container-fluid">
+
+    
+        <hr>
+        {% if info %}
+            <h1 align ="center" style="font-family: 'Times New Roman', Times, serif; font-size: 60px;">{{info.Flower_name}}</h1>
+        {% endif %} 
+        <hr>
+        <!-- contents -->
+
+
+      
+        <div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button"
+            id="toctogglecheckbox" class="toctogglecheckbox" style="display:none">
+    
+            
+          <div class="toctitle" lang="en" dir="ltr">
+            <h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel"
+                for="toctogglecheckbox"></label></span>
+          </div>
+    
+    
+          <ul>
+            <li class="toclevel-1 tocsection-1"><a href="#Introduction:"><span class="tocnumber">1</span> <span
+                  class="toctext">Introduction:</span></a>
+              
+            <li class="toclevel-2 tocsection-2"><a href="#Etymology"><span class="tocnumber">2</span> <span
+                    class="toctext">Etymology</span></a></li>
+            <li class="toclevel-2 tocsection-2"><a href="#Botany"><span class="tocnumber">3</span> <span
+                    class="toctext">Botany</span></a></li>
+    
+                <ul>
+                    <li class="toclevel-2 tocsection-3"><a href="#Evolution"><span class="tocnumber">3.1</span> <span
+                        class="toctext">Evolution</span></a></li>
+                    <li class="toclevel-2 tocsection-4"><a href="#Species"><span class="tocnumber">3.2</span> <span
+                        class="toctext">Species</span></a></li>
+                    <li class="toclevel-2 tocsection-5"><a href="#Taxonomy"><span class="tocnumber">3.3</span> <span
+                        class="toctext">Taxonomy</span></a></li>
+                </ul>
+            </li>
+            <li class="toclevel-2 tocsection-7"><a href="#Uses"><span class="tocnumber">4</span> <span
+                  class="toctext">Uses</span></a></li>
+                <ul>
+                    <li class="toclevel-2 tocsection-8"><a href="#Ornamental plants"><span class="tocnumber">4.1</span> <span
+                        class="toctext">Ornamental plants</span></a></li>
+                    <li class="toclevel-2 tocsection-9"><a href="#Cut flowers"><span class="tocnumber">4.2</span> <span
+                        class="toctext">Cut flowers</span></a></li>
+                    <li class="toclevel-2 tocsection-10"><a href="#Medicinal uses"><span class="tocnumber">4.3</span> <span
+                        class="toctext">Medicinal uses</span></a></li>
+                    <li class="toclevel-2 tocsection-11"><a href="#Health benefits"><span class="tocnumber">4.4</span> <span
+                        class="toctext">Health benefit</span></a></li>
+                    <li class="toclevel-2 tocsection-12"><a href="#Perfumes and food"><span class="tocnumber">4.5</span> <span
+                        class="toctext">Perfumes and food</span></a></li>    
+                </ul>
+            <li class="toclevel-1 tocsection-13"><a href="#Symbolizes"><span class="tocnumber">5</span> <span
+                class="toctext">Symbolizes</span></a></li>
+            <li class="toclevel-1 tocsection-14"><a href="#Season to grow"><span class="tocnumber">6</span> <span
+                class="toctext">Season to grow</span></a></li>				  
+            <li class="toclevel-1 tocsection-15"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See
+                  also</span></a></li>
+            <li class="toclevel-1 tocsection-16"><a href="#References"><span class="tocnumber">8</span> <span
+                  class="toctext">References</span></a></li>
+            <li class="toclevel-1 tocsection-17"><a href="#External_links"><span class="tocnumber">9</span> <span
+                  class="toctext">External links</span></a></li>
+          </ul>
+        </div>
+
+        <div class="container">
+
+            <td>
+                        <img src="{{predict.Img_pre.url}}" alt="" class="img-responsive" style="width: 50%; float: center; margin-block-start: 10px;" />
+                        <img src="{{info.Img.url}}" alt="" class="img-responsive" style="width: 50%; float: center; margin-block-start: 10px;" />
+
+            </td>
+        
+            {% if info %}
+        
+            
+            <h1><span class="mw-headline" id="Introduction"
+                style="font-family:'Courier New', Courier, monospace;"><b>Introduction</b></span><span
+                class="mw-editsection"></span>
+            </h1>
+                        <h5>{{  info.Introduction }}</h5>
+
+                <h3><span class="mw-headline" id="Etymology"
+                    style="font-family:'Courier New', Courier, monospace;"><b>Etymology</b></span><span
+                    class="mw-editsection"></span>
+                </h3>
+                            <h5>{{ info.Etymology }}</h5>
+
+                <h3><span class="mw-headline" id="Botany"
+                    style="font-family:'Courier New', Courier, monospace;"><b>Botany</b></span><span
+                    class="mw-editsection"></span>
+                </h3>
+            
+                <h3><span class="mw-headline" id="Evolution">Evolution</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket"></h3>
+                        <h5>{{ info.Evolution }}</h5>
+                
+                <h3><span class="mw-headline" id="Species">Species</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket"></h3>
+                        <h5>{{ info.Species }}</h5>
+
+                <h3><span class="mw-headline" id="Taxonomy">Taxonomy</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket"></h3>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Domain</th>
+                            <th>Kingdom</th>
+                            <th>Phylum</th>
+                            <th>Order</th>
+                            <th>Family</th>
+                            <th>Genus</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>{{info.Tax_domain}}</td>
+                            <td>{{info.Tax_kingdom}}</td>
+                            <td>{{info.Tax_phylum}}</td>
+                            <td>{{info.Tax_order}}</td>
+                            <td>{{info.Tax_family}}</td>
+                            <td>{{info.Tax_genus}}</td>
+                        </tr>
+                        </tbody> 
+                    </table> 
+
+                    <h1><span class="mw-headline" id="Uses"
+                        style="font-family:'Courier New', Courier, monospace;"><b>Uses</b></span><span
+                        class="mw-editsection"></span></h1>
+                    
+            
+                <h3><span class="mw-headline" id="Ornamental plants">Ornamental plants</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket"></h3>
+                        <h5>{{ info.Ornamental_plants }}</h5>
+
+                <h3><span class="mw-headline" id="Cut flowers">Cut flowers</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket"></h3>
+                        <h5>{{ info.Cut_flowers }}</h5>
+
+                <h3><span class="mw-headline" id="Medicinal uses">Medicinal uses</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket"></h3>
+                        <h5>{{ info.Medicinal_uses }}</h5>
+
+                <h3><span class="mw-headline" id="Health benefits">Health benefits</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket"></h3>
+                        <h5>{{ info.Health_benefit }}</h5>
+
+                <h3><span class="mw-headline" id="Perfumes and food">Perfumes and food</span><span class="mw-editsection"><span
+                    class="mw-editsection-bracket"></h3>
+                        <h5>{{ info.Perfumes_food }}</h5>
+
+                <h1><span class="mw-headline" id="Symbolizes"
+                    style="font-family:'Courier New', Courier, monospace;"><b>Symbolizes</b></span><span
+                    class="mw-editsection"></span></h1>
+                        <h5>{{ info.Symbolizes }}</h5>
+
+                <h1><span class="mw-headline" id="Season_to_grow" style="font-family:'Courier New', Courier, monospace;"><b>Season
+                    to
+                    grow</b></span><span class="mw-editsection"></span></h1>
+                        <h5>{{ info.Season_to_grow }}</h5>
+                        
+                {% else %}
+                    <h1>no data</h1>
+            {% endif %}        
+        </div>
+
+	
+{% endblock content %}

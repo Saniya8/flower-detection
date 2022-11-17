@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		.wrapper { 
+		height: 100%;
+		width: 100%;
+		left:0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		position: absolute;
+	  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+	  background-size: 1800% 1800%;
+	  
+	  -webkit-animation: rainbow 18s ease infinite;
+	  -z-animation: rainbow 18s ease infinite;
+	  -o-animation: rainbow 18s ease infinite;
+		animation: rainbow 18s ease infinite;}
+	  
+	  @-webkit-keyframes rainbow {
+		  0%{background-position:0% 82%}
+		  50%{background-position:100% 19%}
+		  100%{background-position:0% 82%}
+	  }
+	  @-moz-keyframes rainbow {
+		  0%{background-position:0% 82%}
+		  50%{background-position:100% 19%}
+		  100%{background-position:0% 82%}
+	  }
+	  @-o-keyframes rainbow {
+		  0%{background-position:0% 82%}
+		  50%{background-position:100% 19%}
+		  100%{background-position:0% 82%}
+	  }
+	  @keyframes rainbow { 
+		  0%{background-position:0% 82%}
+		  50%{background-position:100% 19%}
+		  100%{background-position:0% 82%}
+	  }
+
+    /* styling part of slider */
+           
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+	</style>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+	<title>Flower Detection</title>
+</head>
+<body>
+   <!-- <div class = wrapper> -->
+    	<nav class="navbar navbar-dark bg-dark">
+        
+            <div id="mySidenav" class="sidenav">
+              <a href="" class="closebtn" onclick="closeNav()"> &times;</a>
+              <a href="{% url 'About' %}">About</a>
+              <a href="{% url 'Help' %}">Help me</a>
+            </div>
+           
+            
+            <a style="font-size:30px; cursor:pointer; color: white;" onclick="openNav()">&#9776; </a>
+            <a class="navbar-brand " href="{% url 'main_home' %}" style="font-size:30px;">FLOWER DETECTION</a>
+            <span > </span>
+		  </nav>
+	  <!-- </div> -->
+
+    
+    <div class="container-fluid">
+            {% block content %} {% endblock %}
+		</div>
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+      </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+            integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+            crossorigin="anonymous"></script>
+        </div>
+</body>
+</html>
